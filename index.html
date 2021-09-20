@@ -5,22 +5,23 @@
 </head>
 <body>
     <div>
-        <div>
-            <input id="bill" class="text-input" type="text" placeholder="$0.00">
+        <div class="col-1">
+            <input id="bill" class="text-input" type="number" placeholder="$0.00">
             <label for="bill">Bill</label>
-            <input id="tip" class="text-input" type="text" placeholder="15%">
+            <input id="tip" class="text-input" type="number" placeholder="15%">
             <label for="tip">Tip</label>
-            <input id="people" class="text-input" type="text" placeholder="1">
+            <input id="people" class="text-input" type="number" placeholder="1">
             <label for="people">Number of people</label>
         </div>
-        <div>
-            <h1>Tip</h1>
-            <h1>Total</h1>
+        <div class="col-2">
+            <h1 class="output-label">Tip</h1>
+            <h1 class="output-label">Total</h1>
         </div>
-        <div>
-            <h1>$0.00</h1>
-            <h1>$0.00</h1>
+        <div class="col-3">
+            <h1 id="tip-total" class="output">$0.00</h1>
+            <h1 id="total" class="output"><strong>$0.00</strong></h1>
         </div>
     </div>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
