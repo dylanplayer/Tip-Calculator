@@ -94,8 +94,6 @@ function update(e){
     const finalTip = billPerPerson * (tipPercentage / 100);
     const total = finalTip + billPerPerson;
 
-    console.log(billPerPerson);
-    
     tipOutput.innerHTML = `$${finalTip.toFixed(2)}`;
     totalOutput.innerHTML = `$${total.toFixed(2)}`;
 
