@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <div class="col-1">
-            <input id="bill" class="text-input" type="number" placeholder="$0.00">
             <label for="bill">Bill</label>
-            <input id="tip" class="text-input" type="number" placeholder="15%">
+            <input id="bill" class="text-input" min="0" type="number" step=".50" value=0.00>
+
             <label for="tip">Tip</label>
-            <input id="people" class="text-input" type="number" placeholder="1">
+            <div class="input-row"><button id="tip-minus-button">-</button><input id="tip" class="text-input" min="0" type="number" step="5" value=15 data-symbol="%"><button id="tip-plus-button">+</button></div>
+
             <label for="people">Number of people</label>
+            <div class="input-row"><button id="people-minus-button">-</button><input id="people" class="text-input" type="number" min="1" step="1" value=1 placeholder="1"><button id="people-plus-button">+</button></div>
         </div>
         <div class="col-2">
-            <h1 class="output-label">Tip</h1>
-            <h1 class="output-label">Total</h1>
+            <div><h1 class="output-label">Tip</h1><p class="per-person-text"  style="opacity: 0;">Per Person</p></div>
+            <div><h1 class="output-label">Total</h1><p class="per-person-text" style="opacity: 0;">Per Person</p></div>
         </div>
         <div class="col-3">
             <h1 id="tip-total" class="output">$0.00</h1>
